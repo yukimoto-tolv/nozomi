@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper div {
+  text-align:center;
+}
+
+/*========= waveを描画するエリア設定 ===============*/
+
+
+.wave {
+  position: relative;
+  height: 140px;
+}
+
+.submerse {
+  position: relative;
+  height: 140px;
+}
+
+.submerse div {
+  position: absolute;
+  height: 140px;
+  width: 100%;
+}
+.submerse1-1 {
+  background: linear-gradient(rgba(95,170,49,0.04), rgba(95,170,49,0));
+}
+.submerse1-2 {
+  background: linear-gradient(rgba(0,184,212,0.04), rgba(0,184,212,0));
+}
+.submerse2 {
+  background: linear-gradient(rgba(95,170,49,0.08), rgba(95,170,49,0));
+}
+.submerse3 {
+  background: linear-gradient(rgba(0,184,212,0.08), rgba(0,184,212,0));
+}
+
+.wave:nth-child(1) {
+  background:#ffffff;
+}
+
+.wave:nth-child(2) {
+  background:#ffffff;
+}
+
+.wave:nth-child(3) {
+  background:#ffffff;
+}
+
+.wave canvas {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+}

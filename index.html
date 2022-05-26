@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>のぞみ薬局</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/wave.css">
+  <link rel="stylesheet" type="text/css" href="css/fluid.css">
+  <link rel="stylesheet" type="text/css" href="css/flickity.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <div class="header-logo">
+        <a href="#" ><img src="" alt=""/></a>
+      </div>
+      <div>
+        <ul class="menu-min">
+          <a href="#modal-menu"><div><span class="material-icons-round">menu</span></div></a>
+        </ul>
+        <ul class="menu">
+          <li class="menu_item"><a href="index.html" class=""><div>トップ</div></a></li>
+          <li class="menu_item"><a href="recruit.html" class=""><div>求人情報</div></a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="modal-menu" id="modal-menu">
+      <a href="#" class="modal_overlay"></a>
+      <div class="modal-menu_content">
+        <a href="index.html" class="modal-menu_close"><div>トップ</div></a>
+      </div>
+      <div class="modal-menu_content">
+        <a href="recruit.html" class="modal-menu_close"><div>求人情報</div></a>
+      </div>
+      <div class="modal-menu_content">
+        <a href="#" class="modal-menu_close"><div><span class="material-icons-round">close</span></div></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero-image -->
+  <!-- <div class="hero">
+    <div class="hero-bg">
+      <img class="logo" src="" alt=""/>
+      <div class="hero-message">
+        <h2>メッセージ</h2>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Hero-movie -->
+  <div class="movie">
+    <div class="overlay-contents">
+      <div class="message-board">
+        <div class="section-title">
+          <h1 class="">
+            <span class="logo-type-ja">のぞみ薬局</span>
+          </h1>
+          <h3 class="">
+            <span class="logo-type-en">NOZOMI PHARMACY</span>
+          </h3>
+          <h3 class="hero-description">
+            <span class="pc-only">地域の皆様から信頼され、安心していただける薬局運営を目指して</span>
+            <span class="mobile-only">地域の皆様から信頼され、<br />安心していただける薬局運営を目指して</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  	<video src="resources/01.mov" loop autoplay muted playsinline></video>
+  </div>
+
+  <!-- Info -->
+  <div class="container" id="info">
+    <section>
+      <div class="flex-layout">
+        <div class="content">
+          <h2 class="">営業時間</h2>
+          <div class="info-item">
+            <div class="info-key smaller"><span class="material-icons-round start">schedule</span><span>月</span><span>〜</span><span>土</span></div>
+            <div class="info-value"><span>09:00</span><span>〜</span><span>19:30</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-key smaller"><span class="material-icons-round start">schedule</span><span>日・祝</span></div>
+            <div class="info-value"><span>09:30</span><span>〜</span><span>18:30</span></div>
+          </div>
+          <hr />
+          <div class="info-item">
+            <div class="info-key smaller"><span class="material-icons-round start">phone</span><span>TEL</span></div>
+            <div class="info-value"><span>099 - 210 - 4075</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-key smaller"><span class="material-icons-round start">print</span><span>FAX</span></div>
+            <div class="info-value"><span>099 - 210 - 4076</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-key smaller">
+              <span class="material-icons-round start">place</span><span>住所</span>
+              <button class="map-btn pc-only" onclick="location.href='https://goo.gl/maps/77gyjEtG16rLci9a6'">マップでみる</button>
+              <button class="map-btn mobile-only" onclick="location.href='https://goo.gl/maps/77gyjEtG16rLci9a6'">マップ</button>
+            </div>
+            <div class="info-value"><span>鹿児島県西之表市西之表 7465-10</span></div>
+          </div>
+          <div class="info-item">
+            <div class="info-key smaller"><span class="material-icons-round start">local_parking</span><span>駐車場</span></div>
+            <div class="info-value"><span>有り</span></div>
+          </div>
+        </div>
+        <div class="twitter-embed">
+          <a class="twitter-timeline" data-width="100%" data-height="400" href="https://twitter.com/nozomitane?ref_src=twsrc%5Etfw">Tweets by nozomitane</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Wave1 -->
+  <div id="wrapper">
+    <div class="wave">
+      <div class="section-title">
+        <h1 class="weight-900">Service</h1>
+        <h3>サービス内容</h3>
+      </div>
+      <canvas id="waveCanvas1"></canvas>
+    </div>
+    <div class="submerse">
+      <div class="submerse1-1"></div>
+      <div class="submerse1-2"></div>
+    </div>
+  </div>
+
+  <!-- Services type A -->
+  <!--
+  <div class="container" id="service">
+    <section>
+      <div class="flex-layout">
+        <div class="content">
+          <div class="align-center"><span class="material-icons-round large-icon">store</span></div>
+          <h2 class="align-center">店頭サービス</h2>
+          <p>
+            店頭サービスに関する説明文を記載店頭サービスに関する説明文を記載店頭サービスに関する説明文を記載
+          </p>
+        </div>
+        <div class="content">
+          <div class="align-center"><span class="material-icons-round large-icon">airport_shuttle</span></div>
+          <h2 class="align-center">在宅相談</h2>
+          <p>
+            在宅相談に関する説明文を記載在宅相談に関する説明文を記載在宅相談に関する説明文を記載在宅相談に関する説明文を記載
+          </p>
+        </div>
+        <div class="content">
+          <div class="align-center"><span class="material-icons-round large-icon">headset_mic</span></div>
+          <h2 class="align-center">オンライン相談</h2>
+          <p>
+            オンライン相談に関する説明文を記載オンライン相談に関する説明文を記載オンライン相談に関する説明文を記載
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  -->
+
+  <!-- Services type B -->
+  <div class="container" id="service">
+    <section>
+      <div class="js-flickity" data-flickity-options='{ "wrapAround":true, "autoPlay":true }'>
+        <div class="flickity-block">
+          <img class="" src="resources/service_01.png" />
+          <div class="content">
+            <h2>店頭サービス</h2>
+            <p>店頭サービスに関する説明文を記載店頭サービスに関する説明文を記載店頭サービスに関する説明文を記載</p>
+          </div>
+        </div>
+        <div class="flickity-block">
+          <img class="" src="resources/service_01.png" />
+          <div class="content">
+            <h2>在宅相談</h2>
+            <p>在宅相談に関する説明文を記載在宅相談に関する説明文を記載在宅相談に関する説明文を記載在宅相談に関する説明文を記載</p>
+          </div>
+        </div>
+        <div class="flickity-block">
+          <img class="" src="resources/service_01.png" />
+          <div class="content">
+            <h2>オンライン相談</h2>
+            <p>オンライン相談に関する説明文を記載オンライン相談に関する説明文を記載オンライン相談に関する説明文を記載</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Wave2 -->
+  <div id="wrapper">
+    <div class="wave">
+      <div class="section-title">
+        <h1 class="weight-900">Recruit</h1>
+        <h3>求人情報</h3>
+      </div>
+      <canvas id="waveCanvas2"></canvas>
+    </div>
+    <div class="submerse">
+      <div class="submerse1-1"></div>
+      <div class="submerse1-2"></div>
+    </div>
+  </div>
+
+  <!-- Recruit -->
+  <div class="container" id="recruit">
+    <section>
+      <div class="flex-layout">
+        <div class="photo content">
+          <img src="resources/recruit_01.png" alt=""/>
+        </div>
+        <div class="content">
+          <h3>薬剤師（新卒・中途）大募集中</h3>
+          <p>
+            のぞみ薬局では、種子島の地域医療を一緒に支える仲間を募集しています。
+          </p>
+          <div class="feature-item">
+            <span class="material-icons-round small feature-item-key">other_houses</span>
+            <span class="feature-item-value">寮・社宅完備</span>
+          </div>
+          <div class="feature-item">
+            <span class="material-icons-round small feature-item-key">directions_car</span>
+            <span class="feature-item-value">1人1台 社用車貸与</span>
+          </div>
+          <div class="feature-item">
+            <span class="material-icons-round small feature-item-key">set_meal</span>
+            <span class="feature-item-value">昼夕2食付き（月～土曜日）</span>
+          </div>
+          <div class="feature-item-button">
+            <button onclick="location.href='recruit.html'">詳しくはこちら</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Wave3 -->
+  <div id="wrapper">
+    <div class="wave">
+      <div class="section-title">
+        <h1 class="weight-900">Diary</h1>
+        <h3>種子島の暮らし</h3>
+      </div>
+      <canvas id="waveCanvas3"></canvas>
+    </div>
+    <div class="submerse">
+      <div class="submerse1-1"></div>
+      <div class="submerse1-2"></div>
+    </div>
+  </div>
+
+  <!-- Diary -->
+  <div class="container" id="diary">
+    <section>
+      <div>
+        <div id="instagram-gallery" class="instagram-gallery" />
+      </div>
+      <div class="flex-layout">
+        <div class="align-center content">
+          <button onclick="location.href='https://www.instagram.com/nozomi_pharmacy_nishinoomote/'">Instagram でみる</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <section>
+      <div class="footer-flex-layout">
+        <div class="content align-center footer-logo">
+          <img src="resources/logo_ja.png" alt=""/>
+        </div>
+        <div class="content">
+          <div class="footer-flex-layout">
+            <div class="footer-info-item">
+              <span class="material-icons-round small">schedule</span>
+              <span class="footer-info-value">月〜土：09:00 〜 19:30</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="material-icons-round small">schedule</span>
+              <span class="footer-info-value">日・祝：09:30 〜 18:30</span>
+            </div>
+          </div>
+          <div class="footer-flex-layout">
+            <div class="footer-info-item">
+              <span class="material-icons-round small">phone</span>
+              <span class="footer-info-value">099 - 210 - 4075</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="material-icons-round small">print</span>
+              <span class="footer-info-value">099 - 210 - 4076</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="material-icons-round small">place</span>
+              <span class="footer-info-value">鹿児島県西之表市西之表 7465-10</span>
+            </div>
+            <div class="footer-info-item">
+              <span class="material-icons-round small">local_parking</span>
+              <span class="footer-info-value">有り</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-layout">
+        <div class="content align-center">
+          © 2022 のぞみ薬局.
+        </div>
+      </div>
+    </section>
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
+<script src="js/wave.js"></script>
+<script src="js/flickity.pkgd.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
