@@ -26,6 +26,10 @@ function init() {
   canvasList.push(document.getElementById("waveCanvas3"));
   colorList.push(['rgb(95,170,49)', 'rgb(0,184,212)']);
 
+  // canvas3 - 色指定
+  canvasList.push(document.getElementById("waveCanvas4"));
+  colorList.push(['rgb(95,170,49)', 'rgb(0,184,212)']);
+
   // canvas3個めの色指定
   // canvasList.push(document.getElementById("waveCanvas3"));
   // colorList.push(['rgb(0,184,212)']);
