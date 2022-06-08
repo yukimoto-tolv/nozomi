@@ -311,6 +311,57 @@ ul {
 	padding: 50px 0;
 }
 
+.statement {
+	width: 100%;
+	line-height: 2.0em;
+	margin-bottom: 80px;
+}
+
+.statement h3 {
+	color: var(--sub-text-color);
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.statement-text {
+	font-size: 1.6em;
+	line-height: 2.5em;
+	text-align: center;
+}
+
+.statement-text span.emphasis {
+	font-size: 1.4em;
+}
+
+.credo {
+	display: flex;
+	gap: 10px;
+	margin: 10px auto;
+}
+
+@media screen and (max-width: 1023px) {
+	.credo {
+		width: 100%;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.credo {
+		width: 60%;
+	}
+}
+
+.bullet {
+	font-size: 1.4em;
+	line-height: 2.0em;
+	color: var(--nozomi-green-100);
+}
+
+.credo-text {
+  flex-grow: 1;
+	font-size: 1.6em;
+	line-height: 1.8em;
+}
+
 /* -- Service -- */
 
 .flex-layout {
