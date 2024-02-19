@@ -3,6 +3,16 @@
   animation: fluidrotate 18s ease 0s infinite;
 }
 
+.fluid-bg1 {
+  background: var(--nozomi-green-10);
+  animation: fluidrotate 18s ease 0s infinite;
+}
+
+.fluid-bg2 {
+  background: var(--nozomi-blue-10);
+  animation: fluidrotate 18s ease -9s infinite;
+}
+
 .fluid-img1 img {
   animation: fluidrotate 30s ease 0s infinite;
 }
@@ -19,6 +29,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  gap: 40px;
 }
 
 @keyframes fluidrotate {
