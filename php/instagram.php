@@ -7,7 +7,7 @@ $access_token = 'EAAH6Xlu58QQBABgotbj3rGplMNudCefqmzdleOwnvCtL7UXaH3cinBv7loQk7a
 // $query = 'business_discovery.username('.$target_user.'){id,followers_count,media_count,ig_id,media{caption,media_url,media_type,like_count,comments_count,timestamp,id}}';
 
 //自分のアカウント情報のみ（コメントアウト中）
-$query = 'id,followers_count,media_count,ig_id,media{caption,media_url,media_type,like_count,comments_count,timestamp,id}';
+$query = 'id,followers_count,media_count,ig_id,media{caption,media_url,thumbnail_url,media_type,like_count,comments_count,timestamp,id,children{id,media_url,media_type,thumbnail_url}}';
 
 $instagram_api_url = 'https://graph.facebook.com/v13.0/';
 $target_url = $instagram_api_url.$instagram_business_id."?fields=".$query."&access_token=".$access_token;
