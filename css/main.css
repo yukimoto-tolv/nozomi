@@ -63,6 +63,7 @@ h2 {
 h3 {
 	font-size: 1.2em;
 	line-height: 2.0em;
+	margin-bottom: 20px;
 }
 
 p {
@@ -270,8 +271,8 @@ ul {
 .note-embed {
 	border: solid 1px var(--shadow-color);
 	border-radius: 5px;
-	margin-top: 5px;
 	padding: 16px;
+	box-sizing:border-box;
 }
 
 .note-embed h2 {
@@ -842,16 +843,21 @@ ul {
 }
 
 .group-info-item span {
-	vertical-align: middle;
 	padding: 5px 0;
 }
 
 .group-info-key {
 	font-weight: 400;
+	line-height: 30px;
 }
 
 .group-info-value {
 	font-weight: 700;
+	line-height: 30px;
+}
+
+.groupmap {
+	padding: 20px 0;
 }
 
 /* -- Flickity -- */
