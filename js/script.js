@@ -14,3 +14,8 @@ $.getJSON("php/instagram.php", function(instagram_data){
   }
   $("#instagram-gallery").append(photos);
 });
+
+$.getJSON("php/rss.php", function(rss_data){
+  // console.log(rss_data);
+  $("#note-embed").append(rss_data);
+});
