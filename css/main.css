@@ -906,6 +906,21 @@ ul {
 	width: 100%;
 }
 
+.flickity-button {
+	background: hsla(0,0%,0%,0.05) !important;
+}
+.flickity-button:hover {
+	color: var(--nozomi-green-100) !important;
+}
+
+.store-info .flickity-prev-next-button.previous {
+	left: -32px !important;
+}
+
+.store-info .flickity-prev-next-button.next {
+	right: -32px !important;
+}
+
 /* -- Instagram description -- */
 
 @media screen and (max-width: 1023px) {
