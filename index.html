@@ -35,8 +35,10 @@
           <a href="#modal-menu"><div><span class="material-icons-round">menu</span></div></a>
         </ul>
         <ul class="menu">
-          <li class="menu_item"><a href="./" class=""><div>トップ</div></a></li>
-          <li class="menu_item"><a href="recruit" class=""><div>求人情報</div></a></li>
+          <li class="menu_item"><a href="index.html" class=""><div>トップ</div></a></li>
+          <li class="menu_item"><a href="important.html" class=""><div>重要事項</div></a></li>
+          <li class="menu_item"><a href="recruit.html" class=""><div>新卒採用</div></a></li>
+          <li class="menu_item"><a href="mid-career.html" class=""><div>中途採用</div></a></li>
         </ul>
       </div>
     </nav>
@@ -46,7 +48,13 @@
         <a href="./" class="modal-menu_close"><div>トップ</div></a>
       </div>
       <div class="modal-menu_content">
-        <a href="recruit" class="modal-menu_close"><div>求人情報</div></a>
+        <a href="important.html" class="modal-menu_close"><div>重要事項</div></a>
+      </div>
+      <div class="modal-menu_content">
+        <a href="recruit.html" class="modal-menu_close"><div>新卒採用</div></a>
+      </div>
+      <div class="modal-menu_content">
+        <a href="mid-career.html" class="modal-menu_close"><div>中途採用</div></a>
       </div>
       <div class="modal-menu_content">
         <a href="#" class="modal-menu_close"><div><span class="material-icons-round">close</span></div></a>
@@ -111,9 +119,13 @@
             <div class="info-value"><span>有り</span></div>
           </div>
         </div>
-        <div class="twitter-embed">
-          <a class="twitter-timeline" data-width="100%" data-height="400" href="https://twitter.com/nozomitane?ref_src=twsrc%5Etfw">Tweets by nozomitane</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+        <!-- <div class="content">
+          <div class="update">
+            <h2 class="">公式 note</h2>
+            <div id="note-embed" class="note-embed">
+            </div>  
+          </div>
+        </div> -->
       </div>
     </section>
   </div>
@@ -148,6 +160,13 @@
         </div>
       </div>
       <div class="js-flickity" data-flickity-options='{ "wrapAround":true, "autoPlay":true }'>
+        <div class="flickity-block">
+          <img class="" src="resources/service_04.jpg" />
+          <div class="content">
+            <h2>医療DXの推進</h2>
+            <p>マイナンバーカードを健康保険証として利用するオンライン資格確認が利用できます。また、電子処方せんについても対応しております。<br>薬剤師のカルテ"薬歴”も電子化されており、いつでも記録が確認でき、安心安全な調剤が可能です。</p>
+          </div>
+        </div>
         <div class="flickity-block">
           <img class="" src="resources/service_01.jpg" />
           <div class="content">
@@ -238,14 +257,15 @@
   <!-- Diary -->
   <div class="container" id="diary">
     <section>
-      <div>
+      <!-- <div>
         <div id="instagram-gallery" class="instagram-gallery" />
-      </div>
-      <div class="flex-layout">
+      </div> -->
+      <!-- <div class="flex-layout"> -->
         <div class="align-center content">
           <button onclick="location.href='https://www.instagram.com/nozomi_pharmacy_nishinoomote/'">Instagram でみる</button>
+          <button onclick="location.href='https://www.facebook.com/people/%E3%81%AE%E3%81%9E%E3%81%BF%E8%96%AC%E5%B1%80/100083173698209/'">Facebook でみる</button>
         </div>
-      </div>
+      <!-- </div> -->
     </section>
   </div>
 
@@ -263,7 +283,7 @@
       <div class="submerse1-2"></div>
     </div>
   </div>
-
+ 
   <!-- Group -->
   <div class="container" id="recruit">
     <section>
@@ -274,7 +294,7 @@
         <div class="content">
           <div class="js-flickity" data-flickity-options='{ "wrapAround":true, "autoPlay":true }'>
             <div class="flickity-block-slim">
-              <img class="" src="resources/group_nishinoomote.jpg" />
+              <img class="" src="resources/group_nishinoomote_2.jpg" />
               <div class="content">
                 <h3>のぞみ薬局</h3>
                 <div class="group-info-item">
@@ -289,7 +309,7 @@
               </div>
             </div>
             <div class="flickity-block-slim">
-              <img class="" src="resources/group_nakatane.jpg" />
+              <img class="" src="resources/group_nakatane_2.jpg" />
               <div class="content">
                 <h3>のぞみ薬局 中種子店</h3>
                 <div class="group-info-item">
@@ -304,7 +324,7 @@
               </div>
             </div>
             <div class="flickity-block-slim">
-              <img class="" src="resources/group_minamitane.jpg" />
+              <img class="" src="resources/group_minamitane_2.jpg" />
               <div class="content">
                 <h3>のぞみ薬局 公立病院前店</h3>
                 <div class="group-info-item">
@@ -323,8 +343,9 @@
       </div>
     </section>
   </div>
+ 
 
-  <!-- Footer -->
+<!-- Footer -->
   <footer>
     <section>
       <div class="footer-flex-layout">
