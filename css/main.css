@@ -992,9 +992,9 @@ ul {
 }
 
 /* Interview */
-
 .interview-layout {
 	display: flex;
+	margin-bottom: 40px;
 }
 
 @media screen and (max-width: 1023px) {
