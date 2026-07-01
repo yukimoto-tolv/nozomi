@@ -15,7 +15,27 @@
 //   $("#instagram-gallery").append(photos);
 // });
 
-$.getJSON("php/rss.php", function(rss_data){
-  // console.log(rss_data);
-  $("#note-embed").append(rss_data);
-});
+// $.getJSON("php/rss.php", function(rss_data){
+//   // console.log(rss_data);
+//   $("#note-embed").append(rss_data);
+// });
+
+// モーダルを開く関数
+function openPdfModal(pdfUrl) {
+    const modal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfIframe');
+    
+    iframe.src = pdfUrl; 
+    modal.style.display = 'flex'; 
+    document.body.style.overflow = 'hidden'; 
+}
+
+function closePdfModal() {
+    const modal = document.getElementById('pdfModal');
+    const iframe = document.getElementById('pdfIframe');
+    
+    modal.style.display = 'none'; 
+    iframe.src = ''; 
+    document.body.style.overflow = ''; 
+}
+  

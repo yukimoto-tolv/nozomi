@@ -232,7 +232,8 @@
             <span class="feature-item-value">昼夕2食付き（月～土曜日）</span>
           </div>
           <div class="feature-item-button">
-            <button onclick="location.href='recruit'">詳しくはこちら</button>
+            <button onclick="location.href='recruit.html'">新卒の方</button>
+            <button onclick="location.href='mid-career.html'">中途の方</button>
           </div>
         </div>
       </div>
@@ -262,8 +263,37 @@
       </div> -->
       <!-- <div class="flex-layout"> -->
         <div class="align-center content">
-          <button onclick="location.href='https://www.instagram.com/nozomi_pharmacy_nishinoomote/'">Instagram でみる</button>
-          <button onclick="location.href='https://www.facebook.com/people/%E3%81%AE%E3%81%9E%E3%81%BF%E8%96%AC%E5%B1%80/100083173698209/'">Facebook でみる</button>
+          <!-- ① PDFの1ページ目を自動で縮小表示するサムネイル -->
+          <div class="pdf-thumbnail-container">
+            <p class="pdf-instruction">タップ・クリックで全体を表示します</p>
+            
+            <!-- #page=1 を末尾につけることで、強制的に1ページ目を表示させます -->
+            <div class="pdf-thumbnail-wrapper" onclick="openPdfModal('resources/notice.pdf')">
+              <object data="resources/notice.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%">
+                <!-- 万が一PDFが表示できないブラウザ用の代替テキスト -->
+                <p>PDFを表示するにはクリックしてください</p>
+              </object>
+              <!-- クリックイベントを通すための透明なカバー層 -->
+              <div class="pdf-click-cover">
+                <div class="pdf-overlay-text">
+                  <span class="material-icons-round">zoom_in</span>
+                  <span>拡大して読む</span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- ② ポップアップ表示されるモーダルウィンドウ -->
+          <div id="pdfModal" class="pdf-modal-backdrop" onclick="closePdfModal()">
+            <div class="pdf-modal-content" onclick="event.stopPropagation();">
+              <span class="pdf-close-btn" onclick="closePdfModal()">&times; 閉じる</span>
+              <iframe id="pdfIframe" src="" width="100%" height="100%"></iframe>
+            </div>
+          </div>
+
+          <button onclick="location.href='https://www.instagram.com/nozomi_pharmacy_nishinoomote/'">Instagram</button>
+          <button onclick="location.href='https://www.facebook.com/people/%E3%81%AE%E3%81%9E%E3%81%BF%E8%96%AC%E5%B1%80/100083173698209/'">Facebook</button>
         </div>
       <!-- </div> -->
     </section>
@@ -396,5 +426,7 @@
 <script src="js/wave.js"></script>
 <script src="js/flickity.pkgd.js"></script>
 <script src="js/script.js"></script>
+<script src="js/mammoth.browser.min.js"></script>
+
 </body>
 </html>

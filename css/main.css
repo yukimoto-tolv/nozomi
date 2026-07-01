@@ -1072,3 +1072,104 @@ ul {
 		display: inline;
 	}
 }
+
+/* PDFサムネイルのスタイル */
+.pdf-thumbnail-container {
+	text-align: center;
+	margin: 20px auto;
+  }
+  .pdf-instruction {
+	font-size: 14px;
+	color: #666;
+	margin-bottom: 10px;
+  }
+  /* PDFを小さく表示する外枠 */
+  .pdf-thumbnail-wrapper {
+	position: relative;
+	width: 210px;  /* 縦横比を一般的なA4（1:1.414）に合わせる設定 */
+	height: 297px; 
+	margin: 0 auto;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .pdf-thumbnail-wrapper:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  }
+  /* PDF内のクリック判定を無効化し、親の拡大イベントを発火させるための透明カバー */
+  .pdf-click-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0); /* 通常時は透明 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: background 0.3s ease;
+  }
+  /* ホバーした時に文字と半透明の黒を重ねる */
+  .pdf-overlay-text {
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	font-size: 14px;
+	font-weight: bold;
+  }
+  .pdf-thumbnail-wrapper:hover .pdf-click-cover {
+	background: rgba(0, 0, 0, 0.4);
+  }
+  .pdf-thumbnail-wrapper:hover .pdf-overlay-text {
+	opacity: 1;
+  }
+
+  /* モーダル（拡大画面）のスタイル */
+  .pdf-modal-backdrop {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 9999;
+	justify-content: center;
+	align-items: center;
+  }
+  .pdf-modal-content {
+	position: relative;
+	width: 90%;
+	max-width: 900px;
+	height: 85vh;
+	background: #fff;
+	border-radius: 8px;
+	box-sizing: border-box;
+	padding: 5px;
+  }
+  .pdf-close-btn {
+	position: absolute;
+	top: -35px;
+	right: 0;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 5px 10px;
+	background: rgba(255,255,255,0.2);
+	border-radius: 4px;
+  }
+  .pdf-close-btn:hover {
+	background: rgba(255,255,255,0.4);
+  }
+  iframe {
+	border: none;
+  }
+  
