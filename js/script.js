@@ -20,22 +20,44 @@
 //   $("#note-embed").append(rss_data);
 // });
 
-// モーダルを開く関数
-function openPdfModal(pdfUrl) {
+function openPdfModal(correctUrl) {
     const modal = document.getElementById('pdfModal');
     const iframe = document.getElementById('pdfIframe');
     
-    iframe.src = pdfUrl; 
-    modal.style.display = 'flex'; 
-    document.body.style.overflow = 'hidden'; 
+    if (modal && iframe) {
+      // HTML側から渡された正しいGoogleドライブのURLをそのままセットします
+      iframe.src = correctUrl; 
+      modal.style.display = 'flex'; 
+      document.body.style.overflow = 'hidden'; // 背面のスクロールを固定（スマホ対策）
+    }
 }
-
+  
 function closePdfModal() {
     const modal = document.getElementById('pdfModal');
     const iframe = document.getElementById('pdfIframe');
     
-    modal.style.display = 'none'; 
-    iframe.src = ''; 
-    document.body.style.overflow = ''; 
-}
+    if (modal && iframe) {
+      modal.style.display = 'none'; 
+      iframe.src = ''; // 閉じた時に読み込みをクリアしてメモリを解放
+      document.body.style.overflow = ''; // 背景スクロールの解除
+    }
+  }
+
+// function openPdfModal(pdfUrl) {
+//     const modal = document.getElementById('pdfModal');
+//     const iframe = document.getElementById('pdfIframe');
+    
+//     iframe.src = pdfUrl; 
+//     modal.style.display = 'flex'; 
+//     document.body.style.overflow = 'hidden'; 
+// }
+
+// function closePdfModal() {
+//     const modal = document.getElementById('pdfModal');
+//     const iframe = document.getElementById('pdfIframe');
+    
+//     modal.style.display = 'none'; 
+//     iframe.src = ''; 
+//     document.body.style.overflow = ''; 
+// }
   
