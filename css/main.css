@@ -1073,18 +1073,26 @@ ul {
 	}
 }
 
+.sns-button-container {
+	display: flex;
+	justify-content: center; /* 横方向の中央寄せ */
+	gap: 20px;               /* ボタンとボタンの間のすき間 */
+	margin-top: 30px;        /* サムネイルとの上下のすき間 */
+	margin-bottom: 10px;
+  }
+
 /* PDFサムネイルのスタイル */
 .pdf-thumbnail-container { text-align: center; margin: 20px auto; }
 .pdf-instruction { font-size: 14px; color: #666; margin-bottom: 10px; }
 .pdf-thumbnail-wrapper {
 	position: relative; 
-	width: 320px;       /* 💡 サムネイルの横幅を指定 */
+	width: 320px;
 	aspect-ratio: 1/1.414;
 	margin: 0 auto; 
 	cursor: pointer;
 	border: 1px solid #ddd; 
 	border-radius: 4px; 
-	overflow: hidden;    /* 💡 はみ出させた黒い余白をすべてカット */
+	overflow: hidden;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
 	transition: transform 0.3s ease, box-shadow 0.3s ease; 
 	background: #fff;
@@ -1094,21 +1102,19 @@ ul {
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* 💡 高さを固定せず、黒い余白だけを自動的に外側へ追い出す魔法の設定 */
-.pdf-object-container {
-	position: absolute;
-	top: 0;
-	left: 0;
+/* サムネイル内のGoogleドライブ画面がスマホのタップを邪魔しないようにガード */
+.pdf-image-container {
 	width: 100%;
 	height: 100%;
-	transform: scale(1.05); 
+	pointer-events: none; 
+}
+.pdf-image-container iframe {
+	width: 100%;
+	height: 100%;
+	transform: scale(1.02); /* ドライブの余計な外枠線を隠す微調整 */
 	transform-origin: center center;
 }
-.pdf-object-container object {
-	width: 100%;
-	height: 100%;
-	pointer-events: none;
-}
+
 .pdf-click-cover {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0);
   display: flex; flex-direction: column; justify-content: center; align-items: center; transition: background 0.3s ease; z-index: 10;
@@ -1116,9 +1122,33 @@ ul {
 .pdf-overlay-text { color: #fff; display: flex; flex-direction: column; align-items: center; opacity: 0; transition: opacity 0.3s ease; font-size: 14px; font-weight: bold; }
 .pdf-thumbnail-wrapper:hover .pdf-click-cover { background: rgba(0, 0, 0, 0.4); }
 .pdf-thumbnail-wrapper:hover .pdf-overlay-text { opacity: 1; }
-.pdf-modal-backdrop { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.85); z-index: 99999; justify-content: center; align-items: center; }
-.pdf-modal-content { position: relative; width: 90%; max-width: 900px; height: 85vh; background: #fff; border-radius: 8px; box-sizing: border-box; padding: 5px; }
+
+/* モーダル背景（スマホ対応強化） */
+.pdf-modal-backdrop { 
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh; 
+  background: rgba(0, 0, 0, 0.85); 
+  z-index: 99999; 
+  justify-content: center; 
+  align-items: center; 
+}
+/* モーダルコンテンツ（iOSスクロールバグ・崩れ対策） */
+.pdf-modal-content { 
+  position: relative; 
+  width: 92%; 
+  max-width: 900px; 
+  height: 80vh; 
+  background: #fff; 
+  border-radius: 8px; 
+  box-sizing: border-box; 
+  padding: 5px; 
+  -webkit-overflow-scrolling: touch; 
+}
 .pdf-close-btn { position: absolute; top: 15px; right: 15px; color: #fff; font-size: 16px; font-weight: bold; cursor: pointer; padding: 10px 18px; background: rgba(0, 0, 0, 0.8); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.3); z-index: 100000; transition: background 0.2s; }
 .pdf-close-btn:hover { background: rgba(255, 0, 0, 0.8); }
-iframe { border: none; }
+iframe { border: none; width: 100%; height: 100%; }
   
