@@ -1102,17 +1102,21 @@ ul {
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* サムネイル内のGoogleドライブ画面がスマホのタップを邪魔しないようにガード */
 .pdf-image-container {
 	width: 100%;
 	height: 100%;
 	pointer-events: none; 
+	overflow: hidden; /* ★重要：はみ出た黒いナビゲーションバーを切り取ります */
+    position: relative;
 }
+
 .pdf-image-container iframe {
-	width: 100%;
-	height: 100%;
-	transform: scale(1.02); /* ドライブの余計な外枠線を隠す微調整 */
-	transform-origin: center center;
+	position: absolute;
+	width: 116%;       /* 少し横に広げる */
+	height: 122%;      /* 下のナビゲーションを押し出すために縦に長くする */
+	top: -5%;          /* 上の余白を少し削る */
+	left: -8%;         /* 左右を中央に合わせる */
+	border: none;
 }
 
 .pdf-click-cover {
